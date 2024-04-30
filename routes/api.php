@@ -17,9 +17,9 @@ use Illuminate\Support\Facades\Route;
 */
 Route::post('login', [AuthController::class, 'login']);
 Route::post('/register', [AuthController::class, 'register']);
+Route::post('services', [ServicesController::class, 'store']);
 
 Route::group(['middleware' => 'check_user'], function () {
     Route::get('services', [ServicesController::class, 'index']);
-    Route::post('services', [ServicesController::class, 'store']);
     Route::patch('services/{serviceId}', [ServicesController::class, 'update']);
 });

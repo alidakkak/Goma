@@ -18,7 +18,7 @@ return new class extends Migration
             $table->string('message');
             $table->string('link');
             $table->string('location');
-            $table->enum('status', ['done', 'reject', 'progress', 'pending']);
+            $table->enum('status', ['done', 'rejected', 'processing', 'pending']);
             $table->timestamps();
         });
     }

@@ -25,7 +25,6 @@ class StoreServicesRequest extends FormRequest
             'customer_type' => 'required',
             'services_name' => 'required',
             'message' => 'required',
-            'link' => 'required',
             'location' => 'required',
             'status' => 'required',
         ];
