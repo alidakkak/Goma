@@ -13,12 +13,11 @@ return new class extends Migration
     {
         Schema::create('services', function (Blueprint $table) {
             $table->id();
-            $table->string('customer_type');
-            $table->string('services_name');
+            $table->string('type');
+            $table->string('service');
             $table->string('message');
-            $table->string('link');
             $table->string('location');
-            $table->enum('status', ['done', 'rejected', 'processing', 'pending']);
+            $table->enum('status', ['done', 'rejected', 'processing', 'pending'])->default('pending');
             $table->timestamps();
         });
     }

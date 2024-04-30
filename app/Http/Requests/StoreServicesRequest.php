@@ -22,11 +22,10 @@ class StoreServicesRequest extends FormRequest
     public function rules(): array
     {
         return [
-            'customer_type' => 'required',
-            'services_name' => 'required',
+            'type' => 'required',
+            'service' => 'required',
             'message' => 'required',
             'location' => 'required',
-            'status' => 'required',
         ];
     }
 }
